@@ -9,11 +9,8 @@ class DeveloperViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
     private val developerNameTextView: TextView =
         itemView.findViewById(R.id.developer_name_text_view)
 
-    fun binc(naME:String){
-        developerNameTextView.text = naME
-
-
-
+    fun bind(name:String){
+        developerNameTextView.text = name
     }
 
 

@@ -59,7 +59,7 @@ class SecondFragment : Fragment() {
 
     }
 
-    fun isSecondElementOpened(element: String): Boolean {
+    private fun isSecondElementOpened(element: String): Boolean {
         if (ImageButton_right.getTag() == element) return true
         if (ImageButton_left.getTag() == element) return true
         if (ImageButton_left_bottom.getTag() == element) return true
@@ -67,7 +67,7 @@ class SecondFragment : Fragment() {
         return false
     }
 
-    fun closeCards() {
+    private fun closeCards() {
         ImageButton_left.setImageResource(R.drawable.bubble)
         ImageButton_left.setTag("bubble")
 
@@ -81,7 +81,7 @@ class SecondFragment : Fragment() {
         ImageButton_right_bottom.setTag("bubble")
     }
 
-    fun openedCardsCount(): Int {
+    private fun openedCardsCount(): Int {
         var count: Int = 0
         if (ImageButton_left.getTag() == "cherry") count++;
         if (ImageButton_right.getTag() == "lemon") count++;
@@ -90,7 +90,7 @@ class SecondFragment : Fragment() {
         return count;
     }
 
-    fun setEventListener(button: ImageButton, cardName: String, @DrawableRes resID: Int) {
+    private fun setEventListener(button: ImageButton, cardName: String, @DrawableRes resID: Int) {
         var openedCards = openedCardsCount()
 
         if (openedCards == 0) {

@@ -26,7 +26,8 @@ class AboutFragment : Fragment() {
 
         website_button = view.findViewById(R.id.website_button)
         developersRecyclerView = view.findViewById(R.id.developers_recycler_view)
-        developersRecyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        developersRecyclerView.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         developersRecyclerView.adapter = DeveloperAdapter(developersNames)
 
 
